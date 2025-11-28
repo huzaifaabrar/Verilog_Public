@@ -1,3 +1,17 @@
+// Parameterizable Half Adder
+module half_adder #(
+    parameter WIDTH = 1
+)(
+    input  wire [WIDTH-1:0] a,
+    input  wire [WIDTH-1:0] b,
+    output wire [WIDTH-1:0] sum,
+    output wire [WIDTH-1:0] carry
+);
+    assign sum   = a ^ b;   // XOR for sum
+    assign carry = a & b;   // AND for carry
+endmodule
+
+
 // Parameterizable Full Adder
 module full_adder #(
         parameter WIDTH = 1
